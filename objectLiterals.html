@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object Literals</h1>
+    
+    <script>
+        let name = 'machine name';
+        let machine = {
+            [name]: 'server',
+            'machine hours': 10000
+        };
+
+        console.log(machine[name]); // server
+        console.log(machine['machine hours']); // 10000
+    
+
+        let machine1 = {
+            [name+' 1']: 'testmachine'
+        }
+        console.log(machine1['machine name 1']);
+
+        let server = {
+            name: "Server",
+            restart(){
+                console.log(`The ${this.name} is restarting`);
+            }
+        }
+        server['restart']();
+
+
+        let colors = new Map();
+        colors.set('red', '#ff0000');
+        colors.set('green', '#00ff00');
+        colors.set('blue', '#0000ff');
+
+        for (let color of colors) {
+            console.log(color);
+        }
+    </script>
+</body>
+</html>
