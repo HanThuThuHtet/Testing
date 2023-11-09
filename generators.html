@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Generators</title>
+</head>
+<body>
+    
+    <script>
+        function* generate() {
+            console.log('invoked 1st time');
+            yield 1;
+            console.log('invoked 2nd time');
+            yield 2;
+        }
+        let gen = generate();
+        for (const g of gen){
+            console.log(g);
+        }
+        
+    </script>
+</body>
+</html>
